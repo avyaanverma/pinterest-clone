@@ -6,12 +6,16 @@ var logger = require('morgan');
 var expressSession = require('express-session');
 const passport = require('passport');
 const User = require('./routes/users');
+const flash = require('connect-flash');
 
 
-var indexRouter = require('./routes/index');
+
+
+var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
 
 var app = express();
+app.use(flash());
 app.use(expressSession({
   resave:false,
   saveUninitialized:false,

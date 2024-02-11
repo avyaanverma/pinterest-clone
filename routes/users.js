@@ -35,8 +35,7 @@ const UserSchema = new mongoose.Schema({
     }
 })
 
-const userModel = mongoose.model("users", UserSchema);
 
-module.exports = userModel;
 UserSchema.plugin(plm);
-module.exports = mongoose.model("User",UserSchema);
+const userModel = mongoose.model("users", UserSchema);
+module.exports = userModel;

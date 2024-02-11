@@ -14,8 +14,8 @@ a{
 .container {
   background-color: white;
   width: 480px;
-  height: 650px;
-  margin: 30px auto ;
+  height: 100vh;
+  margin: 15px auto ;
   border-radius: 10px;
   box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.5);
 }
@@ -149,7 +149,7 @@ hr {
 }
 
 .submit{
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   height: fit-content;
   border-radius: 50px 50px;
@@ -160,4 +160,13 @@ hr {
 .submit:hover{
   background-color: rgb(118, 0, 142) ;
   cursor: pointer;
+}
+.error{
+  color: red;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

@@ -6,34 +6,40 @@
 }
 
 body, html  {
-  width: 100%;
-  background-color: rgb(217, 142, 224)
+  background-color: rgb(217, 142, 224);
+  overflow-x: hidden;
 }
 
 body {
-  display: grid;
+
   place-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .account-settings-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 7px 12px;
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  border: 2px solid #7e57c2;
+  border: 2px solid #7e57c272;
   color: #ffffff;
-  background: linear-gradient(to right, #673ab7, #512da8);
-  border-radius: 5px;
+  background: linear-gradient(to right, #753bd966, #941cfd);
+  font-size: small;
+  font-weight: 600;
+  border-radius: 15px;
   transition: background 0.3s ease;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .account-settings-button:hover {
   background: linear-gradient(to right, #512da8, #4527a0);
 }
 .profile-header{
+  margin: 0;
   padding: 100px;
-  /* border: 2px solid red; */
 }
 #Username{
   font-weight: 800;
@@ -44,106 +50,104 @@ body {
   margin: 0 25%;
   text-align: center;
   padding: 10px;
-  border: 2px solid rgb(98, 5, 114);
+  border: 2px solid rgba(98, 5, 114, 0.466);
   border-radius: 30px 30px;
-  box-shadow:  10px 10px rgb(98, 5, 114);
+  box-shadow:  10px 10px rgba(98, 5, 114, 0.352);
   background-color: aliceblue;
 }
 
-.profile-header-section img{
+#profilePhoto{
   border-radius: 50%;
   border: solid 7px rgb(67, 65, 65);
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 100%;
-  column-gap: 1em;
-  padding: 2em;
+
+
+#form .input-group{
+  margin: 20px;
+  /*border: 5px solid#4527a0;
+  */background-color: #7446fe14;
+  padding: 15px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
-.image-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.image-wrapper > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.content-wrapper p {
-  padding: 0;
-  font-weight: bold;
-}
-
-.overlay {
-  cursor: zoom-in;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 16px;
-  padding: 0.75em;
+#form button{
+  padding: 5px;
   color: white;
-  opacity: 0;
+  background-color: rgba(63, 61, 61, 0.541);
 }
 
-.overlay:hover {
-  opacity: 1;
-}
-
-.overlay div {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.overlay div > p {
+#form button:hover{
+  background-color: rgba(40, 40, 40, 0.591);
   cursor: pointer;
 }
 
-.overlay div .round-button:nth-child(2) {
-  margin-left: auto;
-  margin-right: 0.7em;
+
+.overlay button{
+  width: 20px;
+  height: 20px;
 }
+
+.post{
+  width: 10%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.posts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.posts label{
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50px;
+
+}
+.posts img{
+  width: 100%;
+}
+.column{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 500px;
+  gap: 1em;
+  
+}
+.content-wrapper{
+  position: relative;
+  border: 1px solid orange ;
+
+}
+
 .round-button {
-  width: 2.4em;
-  height: 2.4em;
+  width: 3em;
+  height: 3em;
   border: none;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
   opacity: 0.8;
 }
-
 .round-button img {
-  width: 60%;
-  height: 60%;
+  width: 30%;
+  height: 30%;
 }
-
 .spheric-button {
+  height: 10%;
   border-radius: 50px;
   border: none;
   padding: 0.5em 01.25em;
   opacity: 0.8;
   font-weight: 800;
 }
-
 .spheric-button:hover, .round-button:hover {
   opacity: 1;
   cursor: pointer;
@@ -162,40 +166,29 @@ body {
 .save:hover {
   background-color: #ad081b;
 }
-
-
-@media (max-width: 1050px) {
-  .container {
-     grid-template-columns: repeat(3, 1fr);
-  }
+.overlay {
   
-  .column:last-child {
-    display: none;
-  }
+
+  cursor: zoom-in;
+  position: absolute;
+  width: fit-content;
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-between;
+  border: 1px solid green;
+}
+.overlay div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: row;
+  justify-content: space-evenly;
+  border: 1px solid white;
 }
 
-@media (max-width: 800px) {
-  .container {
-     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .column:nth-child(3) {
-    display: none;
-  }
-}
-
-@media (max-width: 550px) {
-  .container {
-     grid-template-columns: 1fr;
-    gap: 3em;
-  }
- 
-  .column:nth-child(3) {
-    display: flex;
-  }
-  
-  .column:last-child {
-    display: flex;
-  }
-  
+.overlay img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 16px;
 }
